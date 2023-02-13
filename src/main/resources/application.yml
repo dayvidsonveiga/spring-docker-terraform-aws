@@ -1,0 +1,38 @@
+#arquivo de configura��es local/default
+
+#configura��o de porta
+server:
+  port: 8090
+
+#define qual arquivo ser� rodado com base no profile
+spring:
+  config:
+    activate:
+      on-profile:
+        - local
+
+  #configura��es de banco de dados
+  datasource:
+    url: "jdbc:postgresql://localhost:15432/contactBook?currentSchema=public"
+    username: "admin"
+    password: "admin"
+    driver-class-name: "org.postgresql.Driver"
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: "org.hibernate.dialect.PostgreSQLDialect"
+
+  #configura��o do flyway
+  flyway:
+    locations: "db/migration"
+    baseline-on-migrate: false
+
+#configura��o swagger
+springdoc:
+  swagger-ui:
+    path: "/contactbook/swagger-ui.html"
+
+#endpoint viacep
+viacep:
+  endpoint: "viacep.com.br/ws"
