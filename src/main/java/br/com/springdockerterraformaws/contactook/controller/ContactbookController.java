@@ -27,4 +27,10 @@ public class ContactbookController {
         log.info("M getByName, name={}", name);
         return ResponseEntity.ok(contactbookService.getByName(name));
     }
+
+    @GetMapping
+    public ResponseEntity getAll(){
+        log.info("M getAll, NEW");
+        return ResponseEntity.ok(contactbookService.getAll());
+    }
 }

@@ -1,10 +1,12 @@
 package br.com.springdockerterraformaws.contactook.controller.request;
 
 import br.com.springdockerterraformaws.contactook.entity.Contact;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@RequiredArgsConstructor
 @Builder
 public class ContactRequest {
     private String name;
@@ -16,7 +18,7 @@ public class ContactRequest {
         return Contact.builder()
                 .name(name)
                 .phone(phone)
-                .cep(cep)
+                .cep(cep.contains("-")? cep.replace("-", ""): cep)
                 .numero(numero)
                 .build();
     }
