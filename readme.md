@@ -22,6 +22,8 @@ Application in an Amazon EC2 machine using Terraform and Docker.
   
 **Level 3**
 
+<img src=diagram/tutorial-diagram-level-3.jpg>
+
 - Understanding AWS basic infraestructure
 - Create IAM user
 - Configure aws cli profile
