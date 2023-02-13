@@ -19,3 +19,15 @@ Application in an Amazon EC2 machine using Terraform and Docker.
 - run my image on a docker container
 - access my application using swagger and postmany application using swagger and postmanngboot app with Postgres database container.
 - upload my api image to dockerhub
+  
+**Level 3**
+
+- Understanding AWS basic infraestructure
+- Create IAM user
+- Configure aws cli profile
+- Create terraform files needed
+- Create ssh key pair
+- Configure userdata template file
+- Terraform commands
+- Access ec2 host from local machine
+- Access my api running on ec2 using swagger and postman
